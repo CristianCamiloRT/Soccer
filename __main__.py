@@ -19,6 +19,7 @@ class SoccerApi:
         res = conn.getresponse()
         data = res.read()
         data = json.loads(data.decode("utf-8"))
+        conn.close()
         return data['response']
 
     @staticmethod
