@@ -47,9 +47,9 @@ class SoccerApi:
         teams = []
         for team in response:
             teams_data = []
-            teams_data.extend([team['team']['name'], team['team']['founded'], team['team']['logo'], team['venue']['name'], team['venue']['city'], team['venue']['address'], team['venue']['capacity']])
+            teams_data.extend([team['team']['id'], team['team']['name'], team['team']['founded'], team['team']['logo'], team['venue']['name'], team['venue']['city'], team['venue']['address'], team['venue']['capacity']])
             teams.append(teams_data)
-        titles = ['NombreEquipo', 'AñoFundado', 'LinkLogo', 'Estadio', 'CiudadEstadio', 'DirecciónEstadio', 'CapacidadEstadio']
+        titles = ['IdEquipo', 'NombreEquipo', 'AñoFundado', 'LinkLogo', 'Estadio', 'CiudadEstadio', 'DirecciónEstadio', 'CapacidadEstadio']
         self.writeExcel(titles, teams, file_name)
 
 if __name__ == '__main__':
